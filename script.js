@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Matrix rain effect
     const matrixRain = document.getElementById('matrix-rain');
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
+    const characters = 'ا	ب	ج	د	ه	و	ز	ح	ط	ي	ك	ل	م	ن	ص	ع	ف	ض	ق	ر	س	ت	ث	خ	ذ	ظ	غ	ش0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
     const columns = Math.floor(window.innerWidth / 20);
 
     for (let i = 0; i < columns; i++) {

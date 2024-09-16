@@ -138,6 +138,7 @@ footer {
     z-index: 1;
     text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
     animation: blink 1s infinite;
+    opacity: 40%;
 }
 
 @keyframes blink {
