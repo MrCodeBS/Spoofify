@@ -1,4 +1,42 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Matrix rain effect
+    const matrixRain = document.getElementById('matrix-rain');
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*()_+-=[]{}|;:,.<>?';
+    const columns = Math.floor(window.innerWidth / 20);
+
+    for (let i = 0; i < columns; i++) {
+        const column = document.createElement('div');
+        column.className = 'matrix-column';
+        column.style.left = `${i * 20}px`;
+        matrixRain.appendChild(column);
+
+        let y = 0;
+        const intervalId = setInterval(() => {
+            const char = document.createElement('span');
+            char.textContent = characters[Math.floor(Math.random() * characters.length)];
+            column.appendChild(char);
+            y += 20;
+            char.style.top = `${y}px`;
+            char.style.opacity = 1;
+
+            setTimeout(() => {
+                char.style.opacity = 0;
+                setTimeout(() => {
+                    column.removeChild(char);
+                }, 1000);
+            }, 5000);
+
+            if (y > window.innerHeight) {
+                clearInterval(intervalId);
+            }
+        }, 100);
+    }
+
+    // Hide the loading screen after 10 seconds
+    setTimeout(() => {
+        document.getElementById("loading-screen").style.display = "none";
+    }, 10000); // 10 seconds
+
     const playPauseButton = document.getElementById('play-pause');
     const prevButton = document.getElementById('prev');
     const nextButton = document.getElementById('next');
@@ -31,4 +69,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update the now playing info based on the embedded player (this is a mock implementation)
     songTitle.textContent = "Embedded Player Song";
     artist.textContent = "Embedded Player Artist";
+
 });
