@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+#featured h2 {
+    margin-bottom: 20px;
+    grid-template-columns: flex;
+}
+
+.album-embed {
+    max-width: 600px;
+    margin: 0;
+    display: grid; 
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+}
+.album-embed > * {
+    width: 500px; 
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #282828;
+    padding: 10px;
+}
+
+#player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#now-playing {
+    display: flex;
+    align-items: center;
+}
+
+#controls button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 10px;
+}
